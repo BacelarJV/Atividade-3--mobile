@@ -4,6 +4,9 @@ export default function Login(){
 
     const [username, onChangeUserName] = useState('');
     const [password, onChangePassword] = useState('');
+    const login = () =>{
+      console.log(username,password);
+    }
 
     return(
     <SafeAreaView>
@@ -19,9 +22,7 @@ export default function Login(){
         value={password}
         placeholder="Password"
       />
-      <Button title="Login" onPress={()=>{
-        console.log(username,password);
-      }}></Button>
+      <Button title="Login" onPress={login }></Button>
     </SafeAreaView>
     )
 
@@ -31,7 +32,9 @@ const styles = StyleSheet.create({
     input: {
       height: 40,
       margin: 12,
-      borderWidth: 1,
-      padding: 10,
+      borderWidth: 2,
+      padding: 12,
+      backgroundColor: 'lightgray',
+      
     },
   });
